@@ -14,6 +14,7 @@ from .providers.gemini_cli import gemini_cli_generate_content
 from .providers.nvidia import nvidia_generate_content
 from .providers.openrouter import openrouter_generate_content
 from .providers.proxy import proxy_generate_content
+from .providers.vercel import vercel_generate_content
 from .providers.z_ai import z_ai_generate_content
 from .statistics import track_stats
 from .utils import ResponseHelper
@@ -40,6 +41,7 @@ PROVIDER_FUNCS = {
     "nvidia": nvidia_generate_content,
     "openrouter": openrouter_generate_content,
     "proxy": proxy_generate_content,
+    "vercel": vercel_generate_content,
     "z_ai": z_ai_generate_content,
 }
 
