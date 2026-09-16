@@ -24,6 +24,11 @@ def openrouter_generate_content(
     openrouter_request = {
         "model": model,
         "stream": False,
+         "plugins": [
+        {
+            "id": "context-compression"
+        }
+    ],
         "messages": [
             {
                 "content": message.content,
