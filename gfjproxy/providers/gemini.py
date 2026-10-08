@@ -92,6 +92,11 @@ def gemini_generate_content(
 
     generation_config: dict[str, Any] = {}
 
+    if model.startswith("gemini-3"):
+        generation_config["thinkingConfig"] = {
+            "thinkingLevel": "high"
+        }
+
     gemini_request: dict[str, Any] = {
         "safetySettings": [
             {
